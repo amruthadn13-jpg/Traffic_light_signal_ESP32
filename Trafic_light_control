@@ -1,0 +1,37 @@
+#define RED 25
+#define YELLOW 26
+#define GREEN 27
+
+
+
+void setup(){
+  pinMode(RED,OUTPUT);
+  pinMode(YELLOW,OUTPUT);
+  pinMode(GREEN,OUTPUT);
+  Serial.begin(9600);
+  
+
+}
+void loop(){
+  digitalWrite(RED,HIGH);
+  digitalWrite(YELLOW,LOW);
+  digitalWrite(GREEN,LOW);
+  Serial.println("The Red is ON Please Stop!!");
+  
+  delay(5000);
+
+  digitalWrite(RED,LOW);
+  digitalWrite(YELLOW,HIGH);
+  digitalWrite(GREEN,LOW);
+  Serial.println("You Can start Your Vehicle!!");
+
+
+  delay(2000);
+  
+  digitalWrite(RED,LOW);
+  digitalWrite(YELLOW,LOW);
+  digitalWrite(GREEN,HIGH);
+  Serial.println("Let's Goo!!!");
+  delay(3000);
+
+}
